@@ -27,8 +27,11 @@ pool.getConnection((err, connection)=> {
     return;
 });
 
+
 // promisify pool query
 
 pool.query = promisify(pool.query);
 
 module.exports = pool;
+
+// TODO: averiguar como se hace el merge para juntar rama SQL Y MASTER
